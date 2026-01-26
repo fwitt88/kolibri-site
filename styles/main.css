@@ -55,7 +55,7 @@ body {
 h1 {
   margin: 0 0 1.5rem 0;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
@@ -72,13 +72,14 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-.cta {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+.cta{
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(139,198,161,0.25);
+  background: rgba(139,198,161,0.06);
 }
-
-.cta:hover {
-  text-decoration: underline;
+.cta:hover{
+  text-decoration: none;
+  border-color: rgba(139,198,161,0.45);
 }
