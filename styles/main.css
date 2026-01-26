@@ -72,14 +72,16 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-.cta{
+.cta {
   display: inline-block;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(139,198,161,0.25);
-  background: rgba(139,198,161,0.06);
+  border: 1px solid rgba(139,198,161,0.35);
+  background: rgba(139,198,161,0.08);
+  color: var(--accent);
+  font-weight: 500;
 }
-.cta:hover{
+.cta:hover {
+  background: rgba(139,198,161,0.14);
   text-decoration: none;
-  border-color: rgba(139,198,161,0.45);
 }
