@@ -39,7 +39,7 @@
   }
 
   /* ── NAVBAR ── */
-  nav {
+  header > nav, nav.main-nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 0 2.5rem;
     height: 64px;
@@ -48,26 +48,30 @@
     border-bottom: 1px solid rgba(28,35,33,.12);
     transition: background .3s;
   }
-  .nav-logo {
+  nav.main-nav .nav-logo {
     display: flex; align-items: center; gap: 10px;
-    text-decoration: none; color: var(--text);
+    text-decoration: none; color: #1C2321;
   }
-  .nav-logo svg { width: 28px; height: 28px; }
-  .nav-logo-text {
+  nav.main-nav .nav-logo svg { width: 28px; height: 28px; }
+  nav.main-nav .nav-logo-text {
     font-family: 'Fraunces', serif;
     font-size: 17px; font-weight: 600;
-    letter-spacing: -.3px;
+    letter-spacing: -.3px; color: #1C2321;
   }
   .nav-links {
     display: flex; align-items: center; gap: 2rem;
     list-style: none;
   }
+  .nav-links li { list-style: none; }
   .nav-links a {
-    font-size: 14px; color: var(--text);
+    font-size: 14px;
+    color: #1C2321 !important;
     font-weight: 500;
-    text-decoration: none; transition: color .2s;
+    text-decoration: none;
+    transition: color .2s;
+    display: inline-block;
   }
-  .nav-links a:hover { color: var(--green); }
+  .nav-links a:hover { color: #4A7C6F !important; }
   .btn-nav {
     background: var(--green); color: #fff;
     border: none; border-radius: var(--r-sm);
@@ -486,16 +490,9 @@
 <body>
 
 <!-- ── NAVBAR ── -->
-<nav>
+<nav class="main-nav">
   <a href="/" class="nav-logo">
     <img src="assets/Kolibrilogotext.png" alt="Kolibri Dental" style="height:30px; width:auto; object-fit:contain; filter: brightness(0);">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#features">Funciones</a></li>
-    <li><a href="#para-quien">Para quién</a></li>
-    <li><a href="precios.html">Precios</a></li>
-    <li><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
-  </ul>
   </a>
   <ul class="nav-links">
     <li><a href="#features">Funciones</a></li>
