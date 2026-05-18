@@ -98,3 +98,20 @@ h1 {
   outline: 2px solid rgba(139,198,161,0.55);
   outline-offset: 3px;
 }
+
+.legal-links {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+}
+.legal-links a {
+  color: #6b6b68;
+  text-decoration: none;
+}
+.legal-links a:hover {
+  color: #4A7C6F;
+}
+.legal-links span {
+  color: #ccc;
+  margin: 0 0.5rem;
+}
