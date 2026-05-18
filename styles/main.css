@@ -98,20 +98,33 @@ h1 {
   outline: 2px solid rgba(139,198,161,0.55);
   outline-offset: 3px;
 }
-
 .legal-links {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.8rem;
 }
 .legal-links a {
-  color: #6b6b68;
+  color: var(--muted);      /* #9aa0b3 — sichtbar auf dunkel */
   text-decoration: none;
+  transition: color 0.2s;
 }
 .legal-links a:hover {
-  color: #4A7C6F;
+  color: var(--accent);     /* #8bc6a1 — passend zum Grün */
 }
 .legal-links span {
-  color: #ccc;
+  color: var(--muted);
   margin: 0 0.5rem;
+  opacity: 0.4;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;   /* übernimmt padding von .legal-links nicht */
+}
+
+.footer-bottom .legal-links {
+  padding: 0;   /* reset, da .footer-bottom das Spacing übernimmt */
 }
