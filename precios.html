@@ -222,33 +222,33 @@
     display: flex; align-items: center; justify-content: center; gap: .5rem;
   }
 
-  /* ── FEATURES TABLE ── */
-  .features-table-section {
-    max-width: 860px; margin: 0 auto; padding: 0 2.5rem 6rem;
+  /* ── SUCURSALES CTA ── */
+  .sucursales-cta {
+    margin: 2rem 0 0;
+    border: 1.5px solid var(--border);
+    border-radius: var(--r-md);
+    background: white;
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; flex-wrap: wrap;
   }
-  .features-table-section h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 1.75rem; font-weight: 400; text-align: center;
-    margin-bottom: 2.5rem; letter-spacing: -.02em;
+  .sucursales-cta-text { display: flex; flex-direction: column; gap: .25rem; }
+  .sucursales-cta-text strong {
+    font-size: 15px; font-weight: 500; color: var(--text);
   }
-  .feat-table { width: 100%; border-collapse: collapse; }
-  .feat-table thead th {
-    padding: .875rem 1rem; text-align: center;
-    font-size: 13px; font-weight: 500; color: var(--muted);
-    border-bottom: 1.5px solid var(--border);
+  .sucursales-cta-text span {
+    font-size: 13.5px; color: var(--muted);
   }
-  .feat-table thead th:first-child { text-align: left; }
-  .feat-table thead .th-featured { color: var(--green); font-weight: 600; }
-  .feat-table tbody tr { border-bottom: 1px solid var(--border); }
-  .feat-table tbody tr:last-child { border-bottom: none; }
-  .feat-table tbody td {
-    padding: .875rem 1rem; font-size: 14px; color: var(--text);
-    text-align: center;
+  .sucursales-cta-link {
+    flex-shrink: 0;
+    background: transparent; color: var(--green);
+    border: 1.5px solid var(--green-3);
+    border-radius: var(--r-sm); padding: .6rem 1.25rem;
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    text-decoration: none; white-space: nowrap;
+    transition: border-color .2s, background .2s;
   }
-  .feat-table tbody td:first-child { text-align: left; color: var(--text); font-weight: 400; }
-  .feat-table tbody tr:hover td { background: var(--bg-2); }
-  .cat-row td { background: var(--bg-2); font-size: 11px; font-weight: 600;
-    letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: .5rem 1rem; }
+  .sucursales-cta-link:hover { border-color: var(--green); background: var(--green-4); }
 
   /* ── FAQ ── */
   .faq-section {
@@ -325,7 +325,8 @@
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
     nav.main-nav { padding: 0 1.25rem; }
     .page-header { padding: 110px 1.25rem 60px; }
-    .pricing-section, .features-table-section, .faq-section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .pricing-section, .faq-section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .sucursales-cta { flex-direction: column; align-items: flex-start; }
   }
 
   /* Hide annual/monthly prices based on toggle state */
@@ -382,12 +383,12 @@
       <div class="plan-price">
         <div class="price-amount">
           <span class="price-currency">USD</span>
-          <span class="price-num price-monthly">29</span>
-          <span class="price-num price-annual">24</span>
+          <span class="price-num price-monthly">39</span>
+          <span class="price-num price-annual">32</span>
         </div>
         <div class="price-period">por mes</div>
-        <div class="price-annual-note note-annual">Facturado anualmente · USD 288/año</div>
-        <div class="price-annual-note note-monthly" style="color:var(--muted); font-weight:400;">o USD 24/mes con plan anual</div>
+        <div class="price-annual-note note-annual">Facturado anualmente · USD 384/año</div>
+        <div class="price-annual-note note-monthly" style="color:var(--muted); font-weight:400;">o USD 32/mes con plan anual</div>
       </div>
       <div class="plan-seats">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#4A7C6F" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -426,12 +427,12 @@
       <div class="plan-price">
         <div class="price-amount">
           <span class="price-currency">USD</span>
-          <span class="price-num price-monthly">59</span>
-          <span class="price-num price-annual">49</span>
+          <span class="price-num price-monthly">89</span>
+          <span class="price-num price-annual">74</span>
         </div>
         <div class="price-period">por mes</div>
-        <div class="price-annual-note note-annual">Facturado anualmente · USD 588/año</div>
-        <div class="price-annual-note note-monthly">o USD 49/mes con plan anual</div>
+        <div class="price-annual-note note-annual">Facturado anualmente · USD 888/año</div>
+        <div class="price-annual-note note-monthly">o USD 74/mes con plan anual</div>
       </div>
       <div class="plan-seats">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#7D9B8A" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -469,12 +470,12 @@
       <div class="plan-price">
         <div class="price-amount">
           <span class="price-currency">USD</span>
-          <span class="price-num price-monthly">99</span>
-          <span class="price-num price-annual">82</span>
+          <span class="price-num price-monthly">149</span>
+          <span class="price-num price-annual">124</span>
         </div>
         <div class="price-period">por mes</div>
-        <div class="price-annual-note note-annual">Facturado anualmente · USD 984/año</div>
-        <div class="price-annual-note note-monthly" style="color:var(--muted); font-weight:400;">o USD 82/mes con plan anual</div>
+        <div class="price-annual-note note-annual">Facturado anualmente · USD 1.488/año</div>
+        <div class="price-annual-note note-monthly" style="color:var(--muted); font-weight:400;">o USD 124/mes con plan anual</div>
       </div>
       <div class="plan-seats">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#4A7C6F" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -491,7 +492,7 @@
         </li>
         <li>
           <span class="feat-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          Exportación avanzada de datos
+          Exportación de datos a Excel/CSV
         </li>
         <li>
           <span class="feat-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -499,12 +500,21 @@
         </li>
         <li>
           <span class="feat-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          Soporte dedicado
+          Soporte prioritario
         </li>
       </ul>
       <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Cl%C3%ADnica%2B" class="btn-plan btn-plan-outline">Solicitar demo</a>
     </div>
 
+  </div>
+
+  <!-- ── SUCURSALES CTA ── -->
+  <div class="sucursales-cta">
+    <div class="sucursales-cta-text">
+      <strong>¿Tienes múltiples sucursales?</strong>
+      <span>Para redes de clínicas con más de una ubicación, armamos un plan a medida.</span>
+    </div>
+    <a href="mailto:hello@getkolibri.app?subject=Plan%20Red%20de%20Cl%C3%ADnicas" class="sucursales-cta-link">Contáctanos →</a>
   </div>
 
   <p class="all-features-note">
