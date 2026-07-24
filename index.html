@@ -461,6 +461,25 @@
   .legal-links a:hover { color: rgba(255,255,255,.7); }
   .legal-links span { color: rgba(255,255,255,.25); }
  
+  /* ── FAQ ── */
+  .faq-section { max-width: 760px; margin: 0 auto; }
+  .faq-list { margin-top: 2.5rem; }
+  .faq-item { border-top: 1px solid var(--border); padding: 1.25rem 0; }
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    font-size: 15px; font-weight: 500; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    user-select: none;
+  }
+  .faq-icon { font-size: 20px; color: var(--green); flex-shrink: 0; transition: transform .2s; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    font-size: 14.5px; color: var(--muted); line-height: 1.7;
+    margin-top: .875rem; display: none;
+  }
+  .faq-a a { color: var(--green); }
+  .faq-item.open .faq-a { display: block; }
+ 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -504,6 +523,7 @@
   <li><a href="#features">Funciones</a></li>
   <li><a href="#para-quien">Para quién</a></li>
   <li><a href="precios.html">Precios</a></li>
+  <li><a href="#faq">FAQ</a></li>
   <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
   <li><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
 </ul>
@@ -785,6 +805,43 @@
   </div>
 </section>
  
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="section-inner faq-section">
+    <div class="section-label reveal" style="text-align:center;">Antes de decidir</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">
+      Preguntas <em>frecuentes</em>
+    </h2>
+ 
+    <div class="faq-list reveal reveal-delay-2">
+      <div class="faq-item">
+        <div class="faq-q">¿Se usa desde el computador o el celular?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Recomendamos usar Kolibri desde un computador o tablet en recepción/administración, donde se registran inventario, consumos y reportes con más comodidad. También funciona desde el navegador del celular para consultas rápidas, pero la experiencia está pensada para pantallas más grandes.</div>
+      </div>
+ 
+      <div class="faq-item">
+        <div class="faq-q">¿Necesito instalar algo?<span class="faq-icon">+</span></div>
+        <div class="faq-a">No. Kolibri es una aplicación web: funciona directamente desde el navegador (Chrome, Safari, Edge), sin instalación ni actualizaciones manuales.</div>
+      </div>
+ 
+      <div class="faq-item">
+        <div class="faq-q">¿Qué tan difícil es migrar desde planillas Excel?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Te ayudamos a importar tu inventario y productos existentes durante el onboarding. La mayoría de las clínicas piloto están operando con datos reales dentro de la primera semana.</div>
+      </div>
+ 
+      <div class="faq-item">
+        <div class="faq-q">¿Cómo protegen los datos de mis pacientes?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Los datos se transmiten y almacenan cifrados, con control de acceso por roles. Más detalles en nuestra <a href="/privacidad">Política de Privacidad</a>.</div>
+      </div>
+ 
+      <div class="faq-item">
+        <div class="faq-q">¿Hay un período de prueba?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Sí. Ofrecemos una demo personalizada y un período de onboarding guiado antes de activar la facturación. Escríbenos a <a href="mailto:hello@getkolibri.app">hello@getkolibri.app</a> para coordinar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
 <!-- ── CTA FINAL ── -->
 <section class="cta-section" id="contacto">
   <div class="section-inner">
@@ -834,7 +891,12 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+ 
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.closest('.faq-item').classList.toggle('open');
+  });
+});
 </script>
 </body>
 </html>
- 
