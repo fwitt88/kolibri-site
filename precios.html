@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg:        #F0EFEB;
     --bg-2:      #F5F4F2;
@@ -29,7 +29,7 @@
     --r-md:      14px;
     --r-lg:      22px;
   }
-
+ 
   html { scroll-behavior: smooth; }
   body {
     font-family: 'DM Sans', sans-serif;
@@ -38,7 +38,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-
+ 
   /* ── NAVBAR ── */
   nav.main-nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -69,7 +69,7 @@
     transition: background .2s, transform .15s;
   }
   .btn-nav:hover { background: #3d6b5f; transform: translateY(-1px); }
-
+ 
   /* ── PAGE HEADER ── */
   .page-header {
     padding: 140px 2.5rem 80px;
@@ -91,7 +91,7 @@
   .page-header p {
     font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.7;
   }
-
+ 
   /* ── BILLING TOGGLE ── */
   .toggle-wrap {
     display: flex; align-items: center; justify-content: center;
@@ -117,7 +117,7 @@
     border-radius: 100px; padding: 3px 10px;
     font-size: 11.5px; font-weight: 500;
   }
-
+ 
   /* ── PRICING GRID ── */
   .pricing-section {
     max-width: 1100px; margin: 0 auto; padding: 0 2.5rem 6rem;
@@ -150,7 +150,7 @@
   .plan-card.featured .plan-name { color: white; }
   .plan-desc { font-size: 13.5px; color: var(--muted); margin-bottom: 1.75rem; }
   .plan-card.featured .plan-desc { color: rgba(255,255,255,.5); }
-
+ 
   .plan-price {
     margin-bottom: 1.75rem;
     padding-bottom: 1.75rem;
@@ -176,7 +176,7 @@
     font-size: 12px; color: var(--green); margin-top: .35rem; font-weight: 500;
   }
   .plan-card.featured .price-annual-note { color: var(--green-2); }
-
+ 
   .plan-seats {
     display: inline-flex; align-items: center; gap: 6px;
     background: var(--green-4); color: var(--green);
@@ -184,7 +184,7 @@
     font-size: 12px; font-weight: 500; margin-bottom: 1.5rem;
   }
   .plan-card.featured .plan-seats { background: rgba(74,124,111,.25); color: var(--green-2); }
-
+ 
   .plan-features { list-style: none; display: flex; flex-direction: column; gap: .7rem; margin-bottom: 2rem; }
   .plan-features li {
     display: flex; align-items: flex-start; gap: .6rem;
@@ -197,7 +197,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .plan-card.featured .feat-check { background: rgba(74,124,111,.3); }
-
+ 
   .btn-plan {
     display: block; width: 100%; text-align: center;
     padding: .8rem; border-radius: var(--r-sm);
@@ -214,14 +214,14 @@
     background: var(--green); color: white;
   }
   .btn-plan-solid:hover { background: #3d6b5f; transform: translateY(-1px); }
-
+ 
   /* ── ALL FEATURES NOTE ── */
   .all-features-note {
     text-align: center; margin: 2.5rem 0 0;
     font-size: 14px; color: var(--muted);
     display: flex; align-items: center; justify-content: center; gap: .5rem;
   }
-
+ 
   /* ── SUCURSALES CTA ── */
   .sucursales-cta {
     margin: 2rem 0 0;
@@ -249,7 +249,7 @@
     transition: border-color .2s, background .2s;
   }
   .sucursales-cta-link:hover { border-color: var(--green); background: var(--green-4); }
-
+ 
   /* ── FAQ ── */
   .faq-section {
     max-width: 700px; margin: 0 auto; padding: 0 2.5rem 6rem;
@@ -274,7 +274,7 @@
     margin-top: .875rem; display: none;
   }
   .faq-item.open .faq-a { display: block; }
-
+ 
   /* ── CTA ── */
   .cta-section { background: var(--green); padding: 100px 2.5rem; }
   .cta-inner { max-width: 600px; margin: 0 auto; text-align: center; }
@@ -304,7 +304,7 @@
     transition: border-color .2s, color .2s;
   }
   .btn-ghost:hover { border-color: rgba(255,255,255,.6); color: #fff; }
-
+ 
   /* ── FOOTER ── */
   footer {
     background: var(--dark); color: rgba(255,255,255,.35);
@@ -319,7 +319,7 @@
   }
   .footer-links a:hover { color: rgba(255,255,255,.7); }
   .footer-copy { font-size: 12px; }
-
+ 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
@@ -328,7 +328,7 @@
     .pricing-section, .faq-section { padding-left: 1.25rem; padding-right: 1.25rem; }
     .sucursales-cta { flex-direction: column; align-items: flex-start; }
   }
-
+ 
   /* Hide annual/monthly prices based on toggle state */
   .price-monthly, .note-monthly { display: block; }
   .price-annual, .note-annual { display: none; }
@@ -339,11 +339,11 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- ── NAVBAR ── -->
 <nav class="main-nav">
   <a href="/" class="nav-logo">
-    <img src="assets/Kolibrilogotext.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
+    <img src="assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
   </a>
   <ul class="nav-links">
     <li><a href="/#features">Funciones</a></li>
@@ -354,14 +354,14 @@
   </ul>
   <a href="https://getkolibri.app/login" class="btn-nav">Acceder al app →</a>
 </nav>
-
+ 
 <!-- ── HEADER ── -->
 <div class="page-header">
   <div class="section-label">Precios</div>
   <h1>Simple, <em>sin sorpresas.</em><br>Todo incluido desde el día uno.</h1>
   <p>Un plan por dentista. Todas las funciones en cada plan. Sin módulos adicionales, sin costos ocultos.</p>
 </div>
-
+ 
 <!-- ── TOGGLE ── -->
 <div class="toggle-wrap">
   <span class="toggle-label lbl-monthly active">Mensual</span>
@@ -371,11 +371,11 @@
   <span class="toggle-label lbl-annual">Anual</span>
   <span class="toggle-badge">2 meses gratis</span>
 </div>
-
+ 
 <!-- ── PRICING CARDS ── -->
 <div class="pricing-section">
   <div class="pricing-grid">
-
+ 
     <!-- SOLO -->
     <div class="plan-card">
       <div class="plan-name">Solo</div>
@@ -418,7 +418,7 @@
       </ul>
       <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Solo" class="btn-plan btn-plan-outline">Solicitar demo</a>
     </div>
-
+ 
     <!-- CLÍNICA (featured) -->
     <div class="plan-card featured">
       <div class="featured-badge">Más popular</div>
@@ -462,7 +462,7 @@
       </ul>
       <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Cl%C3%ADnica" class="btn-plan btn-plan-solid">Solicitar demo</a>
     </div>
-
+ 
     <!-- CLÍNICA+ -->
     <div class="plan-card">
       <div class="plan-name">Clínica+</div>
@@ -505,9 +505,9 @@
       </ul>
       <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Cl%C3%ADnica%2B" class="btn-plan btn-plan-outline">Solicitar demo</a>
     </div>
-
+ 
   </div>
-
+ 
   <!-- ── SUCURSALES CTA ── -->
   <div class="sucursales-cta">
     <div class="sucursales-cta-text">
@@ -516,17 +516,17 @@
     </div>
     <a href="mailto:hello@getkolibri.app?subject=Plan%20Red%20de%20Cl%C3%ADnicas" class="sucursales-cta-link">Contáctanos →</a>
   </div>
-
+ 
   <p class="all-features-note">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#4A7C6F" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Todas las funciones incluidas en todos los planes — sin módulos adicionales.
   </p>
 </div>
-
+ 
 <!-- ── FAQ ── -->
 <div class="faq-section">
   <h2>Preguntas frecuentes</h2>
-
+ 
   <div class="faq-item">
     <div class="faq-q">
       ¿Puedo cambiar de plan más adelante?
@@ -534,7 +534,7 @@
     </div>
     <div class="faq-a">Sí. Puedes subir o bajar de plan en cualquier momento. El cambio se aplica al siguiente ciclo de facturación.</div>
   </div>
-
+ 
   <div class="faq-item">
     <div class="faq-q">
       ¿Qué pasa si tengo más de 6 dentistas?
@@ -542,7 +542,7 @@
     </div>
     <div class="faq-a">Escríbenos a <a href="mailto:hello@getkolibri.app">hello@getkolibri.app</a> y armamos un plan a medida para tu clínica.</div>
   </div>
-
+ 
   <div class="faq-item">
     <div class="faq-q">
       ¿Hay un período de prueba?
@@ -550,7 +550,7 @@
     </div>
     <div class="faq-a">Sí. Ofrecemos una demo personalizada y un período de onboarding guiado antes de activar la facturación. Escríbenos para coordinar.</div>
   </div>
-
+ 
   <div class="faq-item">
     <div class="faq-q">
       ¿En qué moneda se cobra?
@@ -558,7 +558,7 @@
     </div>
     <div class="faq-a">Los precios están en USD. El cobro se realiza via Stripe con tarjeta de crédito o débito internacional.</div>
   </div>
-
+ 
   <div class="faq-item">
     <div class="faq-q">
       ¿Puedo cancelar cuando quiera?
@@ -567,7 +567,7 @@
     <div class="faq-a">En el plan mensual puedes cancelar en cualquier momento sin penalidad. En el plan anual, el acceso continúa hasta el final del período pagado.</div>
   </div>
 </div>
-
+ 
 <!-- ── CTA ── -->
 <section class="cta-section">
   <div class="cta-inner">
@@ -583,11 +583,11 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ── FOOTER ── -->
 <footer>
   <a href="/" class="footer-brand" style="display:flex; align-items:center; text-decoration:none;">
-    <img src="assets/Kolibrilogotext.png" alt="Kolibri" style="height:36px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:.75;">
+    <img src="assets/Kolibri_logo_text.png" alt="Kolibri" style="height:36px; width:auto; object-fit:contain; filter:brightness(0) invert(1); opacity:.75;">
   </a>
   <nav class="footer-links">
     <a href="/#features">Funciones</a>
@@ -599,7 +599,7 @@
   </nav>
   <span class="footer-copy">© 2026 Kolibri Tech · hello@getkolibri.app</span>
 </footer>
-
+ 
 <script>
   // Billing toggle
   const toggle = document.getElementById('billingToggle');
@@ -607,7 +607,7 @@
     toggle.classList.toggle('annual');
     document.body.classList.toggle('annual');
   });
-
+ 
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
