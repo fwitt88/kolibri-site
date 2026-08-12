@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kolibri Dental — Gestión simple para clínicas dentales reales</title>
-<meta name="description" content="Software de gestión para clínicas dentales en Chile. Inventario, consumos, contratos y reportes — sin planillas, sin complicaciones.">
+<title>Kolibri Dental — Controla costos, inventario y rentabilidad de tu clínica</title>
+<meta name="description" content="Software de gestión para clínicas dentales en Chile. Controla inventario, costos por tratamiento, facturación, personal y rentabilidad — todo en un solo lugar.">
  <link rel="icon" type="image/svg+xml" href="assets/icons/kolibri-icon.svg">
 <link rel="icon" type="image/png" href="assets/icons/kolibri-icon.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -170,6 +170,14 @@
     position: relative;
     opacity: 0; animation: fadeIn .8s .4s ease forwards;
   }
+  .hero-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--r-lg);
+    box-shadow: 0 32px 80px rgba(28,35,33,.22);
+    border: 1px solid var(--border);
+  }
   .mockup-card {
     background: var(--dark);
     border-radius: var(--r-lg);
@@ -320,6 +328,49 @@
   }
   .problema-card p { font-size: 14.5px; color: rgba(255,255,255,.45); line-height: 1.7; }
  
+  /* ── COMO FUNCIONA ── */
+  .cf-steps { margin-top: 3.5rem; display: flex; flex-direction: column; gap: 5rem; }
+  .cf-step {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3.5rem; align-items: center;
+  }
+  .cf-step.reverse .cf-step-media { order: 2; }
+  .cf-step.reverse .cf-step-text { order: 1; }
+  .cf-step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 12px; font-weight: 400;
+    color: var(--green); letter-spacing: .08em;
+    margin-bottom: .75rem;
+  }
+  .cf-step-text h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem; font-weight: 400;
+    color: var(--text); margin-bottom: .75rem;
+  }
+  .cf-step-text p { font-size: 15.5px; color: var(--muted); line-height: 1.75; }
+  .cf-step-media img {
+    display: block; width: 100%; height: auto;
+    border-radius: var(--r-lg);
+    box-shadow: 0 24px 60px rgba(28,35,33,.16);
+    border: 1px solid var(--border);
+  }
+  .cf-step-media-placeholder {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 2.5rem;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .cf-placeholder-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .875rem 1.125rem;
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--r-md);
+  }
+  .cf-placeholder-label { font-size: 13px; color: var(--muted); }
+  .cf-placeholder-value { font-size: 15px; font-weight: 500; color: var(--text); }
+  .cf-placeholder-value.green { color: var(--green); }
+ 
   /* ── FEATURES ── */
   .features-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;
@@ -365,6 +416,20 @@
     border-radius: 100px; padding: 3px 10px; font-size: 11.5px;
   }
  
+  .also-row {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.5rem;
+  }
+  .also-label { font-size: 14px; color: var(--muted); font-weight: 500; white-space: nowrap; }
+  .also-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .also-pill {
+    background: var(--bg-2); border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 100px; padding: 5px 14px; font-size: 13px;
+  }
+ 
   /* ── PARA QUIEN ── */
   .para-quien { background: var(--dark-2); color: #fff; }
   .para-quien .section-label { color: var(--green-2); }
@@ -398,6 +463,12 @@
     color: var(--green-2); line-height: 1; margin-bottom: .3rem;
   }
   .pq-stat-label { font-size: 13px; color: rgba(255,255,255,.4); }
+  .pq-screenshot img {
+    display: block; width: 100%; height: auto;
+    border-radius: var(--r-lg);
+    box-shadow: 0 24px 60px rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.08);
+  }
  
   /* ── CTA FINAL ── */
   .cta-section { background: var(--green); }
@@ -507,6 +578,9 @@
     .features-grid { grid-template-columns: 1fr; }
     .pq-layout { grid-template-columns: 1fr; gap: 2.5rem; }
     .float-tag, .float-tag-2 { display: none; }
+    .cf-step, .cf-step.reverse { grid-template-columns: 1fr; gap: 1.75rem; }
+    .cf-step.reverse .cf-step-media, .cf-step.reverse .cf-step-text { order: initial; }
+    .cf-steps { gap: 3rem; }
     nav { padding: 0 1.25rem; }
     section { padding: 70px 1.25rem; }
   }
@@ -520,15 +594,17 @@
     <img src="assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
   </a>
   <ul class="nav-links">
+  <li><a href="#como-funciona">Cómo funciona</a></li>
   <li><a href="#features">Funciones</a></li>
   <li><a href="#para-quien">Para quién</a></li>
   <li><a href="precios.html">Precios</a></li>
   <li><a href="#faq">FAQ</a></li>
   <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
   <li><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
+  <li><a href="https://app.getkolibri.app">Acceder</a></li>
 </ul>
-  <a href="https://app.getkolibri.app" class="btn-nav">
-    Acceder al app →
+  <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-nav">
+    Agendar demo →
   </a>
 </nav>
  
@@ -545,101 +621,37 @@
         Sin planillas.
       </h1>
       <p class="hero-sub">
-        Kolibri Dental centraliza el inventario, los consumos por tratamiento, los contratos de servicio y los reportes — todo en un solo lugar, diseñado para clínicas dentales reales.
+        Controla tus costos, inventario y rentabilidad en un solo lugar. Kolibri conecta lo que pasa cada día en tu clínica con los números que realmente importan.
       </p>
       <div class="hero-actions">
-        <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental" class="btn-primary">
-          Solicitar demo
+        <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-primary">
+          Agendar una demo
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="https://app.getkolibri.app" class="btn-secondary">
-          Acceder al app
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#1C2321" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Probar Kolibri →
         </a>
       </div>
       <div class="hero-social">
-        <span class="hero-social-text">MVP activo en</span>
-        <span class="hero-pill">🇨🇱 Chile</span>
-        <span class="hero-pill">Expandiendo a LATAM</span>
+        <span class="hero-pill">🇨🇱 Diseñado para clínicas en Chile</span>
+        <span class="hero-pill">14 días gratis</span>
       </div>
     </div>
  
-    <!-- APP MOCKUP -->
+    <!-- APP SCREENSHOT -->
     <div class="hero-visual">
-      <div class="float-tag">
-        <div class="float-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <div class="float-tag-label">Stock crítico detectado</div>
-          <div class="float-tag-value">5 productos bajo mínimo</div>
-        </div>
-      </div>
- 
-      <div class="mockup-card">
-        <div class="mockup-header">
-          <div>
-            <div style="font-size:13px; font-weight:500; color:rgba(255,255,255,.85);">Buenas tardes, Dra. Ramírez 👋</div>
-            <div class="mockup-title" style="margin-top:2px;">Vista general del día</div>
-          </div>
-          <div class="mockup-badge">Marzo 2026</div>
-        </div>
-        <div class="kpi-grid" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom:1rem;">
-          <div class="kpi-card">
-            <div class="kpi-label">Ingresos</div>
-            <div class="kpi-value" style="font-size:17px;">$393.299</div>
-            <div class="kpi-sub">+3% vs. Feb 2026</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Margen</div>
-            <div class="kpi-value" style="font-size:17px;">$391.433</div>
-            <div class="kpi-sub">+4% vs. Feb 2026</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-label">Stock crítico</div>
-            <div class="kpi-value" style="font-size:17px; color:#E8A87C;">5</div>
-            <div class="kpi-sub" style="color:#E8A87C;">productos</div>
-          </div>
-        </div>
-        <div style="font-size:11px; font-weight:500; color:rgba(255,255,255,.35); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.5rem;">Stock bajo mínimo</div>
-        <table class="mock-table">
-          <tbody>
-            <tr>
-              <td>Composite A2 (Kit)</td>
-              <td style="text-align:right;"><span class="stock-low">0 / 20 g | 0%</span></td>
-            </tr>
-            <tr>
-              <td>Anestésico Lidocaína</td>
-              <td style="text-align:right;"><span class="stock-low">0 / 10 u. | 0%</span></td>
-            </tr>
-            <tr>
-              <td>Guantes Nitrilo L</td>
-              <td style="text-align:right;"><span class="stock-low">4 / 50 u. | 8%</span></td>
-            </tr>
-            <tr>
-              <td>Cemento Temporal</td>
-              <td style="text-align:right;"><span class="stock-low">0 / 20 ml | 0%</span></td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="text-align:right; margin-top:.75rem; font-size:12px; font-weight:500; color:rgba(255,255,255,.5);">Ver todos (5) →</div>
-      </div>
- 
-      <div class="float-tag-2">
-        <div style="width:8px; height:8px; border-radius:50%; background:#E8C068; flex-shrink:0;"></div>
-        <div class="float-tag-2-text">Próximo pago: ACHS el 01-04-2026</div>
-      </div>
+      <img class="hero-screenshot" src="assets/Dashboard-Screenshot.png" alt="Dashboard de Kolibri Dental con ingresos, costos, inventario y pagos pendientes">
     </div>
   </div>
 </section>
  
 <!-- ── CONTEXT STRIP ── -->
 <div class="context-strip">
+  <div class="context-item"><span class="context-dot"></span> Costos reales por tratamiento</div>
   <div class="context-item"><span class="context-dot"></span> Inventario en tiempo real</div>
-  <div class="context-item"><span class="context-dot"></span> Consumos por tratamiento</div>
-  <div class="context-item"><span class="context-dot"></span> Contratos de servicio</div>
-  <div class="context-item"><span class="context-dot"></span> Reportes automáticos</div>
-  <div class="context-item"><span class="context-dot"></span> Sin planillas Excel</div>
+  <div class="context-item"><span class="context-dot"></span> Facturación y pagos</div>
+  <div class="context-item"><span class="context-dot"></span> Rentabilidad y márgenes</div>
+  <div class="context-item"><span class="context-dot"></span> Todo en un solo lugar</div>
 </div>
  
 <!-- ── PROBLEMA ── -->
@@ -647,32 +659,96 @@
   <div class="section-inner">
     <div class="section-label reveal">El problema</div>
     <h2 class="section-title reveal reveal-delay-1">
-      ¿Cómo gestionas tu clínica hoy?
+      Sabes cuánto cobras.<br>
+      ¿Sabes cuánto <em>realmente ganas</em>?
     </h2>
     <p style="font-size:17px; color:rgba(255,255,255,.45); margin-top:1rem; max-width:560px;" class="reveal reveal-delay-2">
-      La mayoría de las clínicas dentales operan con una mezcla de hojas de cálculo, cuadernos y mensajes de WhatsApp. Funciona hasta que no funciona.
+      Entre materiales, laboratorio, personal, servicios y pagos pendientes, entender la rentabilidad real de una clínica no debería requerir cinco planillas distintas.
     </p>
     <div class="problema-grid">
       <div class="problema-card reveal">
         <div class="problema-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#7D9B8A" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Planillas que se quedan obsoletas</h3>
-        <p>El Excel de stock nunca refleja la realidad. Cada dentista actualiza (o no actualiza) a su manera. Al final del día, nadie sabe cuánto queda de nada.</p>
+        <h3>No sabes cuánto cuesta realmente un tratamiento</h3>
+        <p>El precio está claro. Pero materiales, laboratorio y costos de personal suelen estar repartidos en distintos archivos — o simplemente no se calculan.</p>
       </div>
       <div class="problema-card reveal reveal-delay-1">
         <div class="problema-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#7D9B8A" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a1 1 0 00-1 1v10a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1z" stroke="#7D9B8A" stroke-width="1.5"/><path d="M16 7V5a1 1 0 00-1-1H9a1 1 0 00-1 1v2M12 12v4M10 12v2M14 12v3" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Tiempo perdido en administración</h3>
-        <p>Contar stocks físicamente, buscar facturas antiguas, consolidar datos de distintos archivos. Tiempo que podría usarse en lo que importa: los pacientes.</p>
+        <h3>El inventario y la operación viven separados</h3>
+        <p>Se compra material, se consume en tratamientos y se repone stock, pero pocas clínicas conectan esos movimientos con sus costos reales.</p>
       </div>
       <div class="problema-card reveal reveal-delay-2">
         <div class="problema-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#7D9B8A" stroke-width="1.5"/><path d="M12 7v5l3 3" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Sin visibilidad real de costos</h3>
-        <p>¿Cuánto te costó ese implante en materiales? ¿Cuál es tu margen real por tipo de tratamiento? Sin datos claros, es imposible tomar buenas decisiones.</p>
+        <h3>Tomas decisiones con información incompleta</h3>
+        <p>Facturación no es utilidad. Sin una visión clara de ingresos, costos, márgenes y pagos pendientes, es difícil saber qué realmente funciona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── COMO FUNCIONA ── -->
+<section id="como-funciona">
+  <div class="section-inner">
+    <div class="section-label reveal">Cómo funciona</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      De lo que ocurre en el sillón<br>
+      a los <em>números de tu clínica.</em>
+    </h2>
+ 
+    <div class="cf-steps">
+      <div class="cf-step reveal">
+        <div class="cf-step-media">
+          <div class="cf-step-media-placeholder">
+            <div class="cf-placeholder-row">
+              <span class="cf-placeholder-label">Precio del tratamiento</span>
+              <span class="cf-placeholder-value">$180.000</span>
+            </div>
+            <div class="cf-placeholder-row">
+              <span class="cf-placeholder-label">Costo estimado</span>
+              <span class="cf-placeholder-value">$62.400</span>
+            </div>
+            <div class="cf-placeholder-row">
+              <span class="cf-placeholder-label">Margen</span>
+              <span class="cf-placeholder-value green">$117.600</span>
+            </div>
+            <div class="cf-placeholder-row">
+              <span class="cf-placeholder-label">Margen en %</span>
+              <span class="cf-placeholder-value green">65,3%</span>
+            </div>
+          </div>
+        </div>
+        <div class="cf-step-text">
+          <div class="cf-step-num">01 — Define tus tratamientos</div>
+          <h3>Configura materiales, laboratorio y precio</h3>
+          <p>Configura los materiales, laboratorio y precio de cada tratamiento. Kolibri calcula su costo estimado y margen.</p>
+        </div>
+      </div>
+ 
+      <div class="cf-step reverse reveal">
+        <div class="cf-step-media">
+          <img src="assets/Screenshot_Treatments-target-actual.png" alt="Comparación de consumo planificado (Plan) vs. consumo real por cita en Kolibri Dental">
+        </div>
+        <div class="cf-step-text">
+          <div class="cf-step-num">02 — Registra lo que realmente se utilizó</div>
+          <h3>Compara el plan con el consumo real</h3>
+          <p>En cada cita puedes comparar el consumo planificado con el consumo real. Kolibri actualiza el inventario a partir de la operación diaria.</p>
+        </div>
+      </div>
+ 
+      <div class="cf-step reveal">
+        <div class="cf-step-media">
+          <img src="assets/Screenshot_Reports.png" alt="Reporte de tratamientos en Kolibri Dental con ingresos, costos, utilidad y margen">
+        </div>
+        <div class="cf-step-text">
+          <div class="cf-step-num">03 — Entiende qué deja dinero en tu clínica</div>
+          <h3>Utilidad y margen por tratamiento</h3>
+          <p>Kolibri combina ingresos, materiales, laboratorio y personal para mostrar utilidad y margen por tratamiento.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -690,28 +766,28 @@
       <div class="feature-card reveal">
         <div class="feature-num">01</div>
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a1 1 0 00-1 1v10a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1z" stroke="#4A7C6F" stroke-width="1.5"/><path d="M16 7V5a1 1 0 00-1-1H9a1 1 0 00-1 1v2M12 12v4M10 12v2M14 12v3" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Inventario en tiempo real</h3>
-        <p>Registra entradas, salidas y ajustes. Define stocks mínimos por producto. Recibe alertas antes de que se acabe lo que necesitas para trabajar.</p>
+        <h3>Costos y márgenes por tratamiento</h3>
+        <p>Conoce cuánto cuesta realmente cada tratamiento incluyendo materiales, laboratorio y personal. Compara precio, costo, utilidad y margen.</p>
         <div class="feature-tags">
-          <span class="feature-tag">Entradas y salidas</span>
-          <span class="feature-tag">Stock mínimo</span>
-          <span class="feature-tag">Alertas críticas</span>
+          <span class="feature-tag">Costo real</span>
+          <span class="feature-tag">Utilidad</span>
+          <span class="feature-tag">Margen</span>
         </div>
       </div>
  
       <div class="feature-card reveal reveal-delay-1">
         <div class="feature-num">02</div>
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h.01M12 16h.01M9 12h.01" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 7H4a1 1 0 00-1 1v10a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1z" stroke="#4A7C6F" stroke-width="1.5"/><path d="M16 7V5a1 1 0 00-1-1H9a1 1 0 00-1 1v2M12 12v4M10 12v2M14 12v3" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Consumos por tratamiento</h3>
-        <p>Asocia los materiales usados a cada cita. Calcula el costo real por tratamiento. Identifica qué procedimientos son más rentables y dónde estás perdiendo margen.</p>
+        <h3>Inventario en tiempo real</h3>
+        <p>Controla compras, consumos y ajustes. Define stocks mínimos y conoce cuánto capital tienes inmovilizado en inventario.</p>
         <div class="feature-tags">
-          <span class="feature-tag">BOM por tratamiento</span>
-          <span class="feature-tag">Costo real</span>
-          <span class="feature-tag">Márgenes</span>
+          <span class="feature-tag">Compras</span>
+          <span class="feature-tag">Stock mínimo</span>
+          <span class="feature-tag">Capital en inventario</span>
         </div>
       </div>
  
@@ -720,12 +796,12 @@
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 12h6M9 16h4M7 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-2M9 3a1 1 0 011-1h4a1 1 0 011 1v1H9V3z" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Contratos y servicios</h3>
-        <p>Gestiona los contratos de mantenimiento de tus equipos (sillones, radiografías, esterilizadoras). Nunca más olvides una renovación o un pago vencido.</p>
+        <h3>Facturación y control financiero</h3>
+        <p>Visualiza lo presupuestado, cobrado y pendiente. Sigue ingresos y costos sin consolidar información manualmente.</p>
         <div class="feature-tags">
-          <span class="feature-tag">Contratos activos</span>
-          <span class="feature-tag">Vencimientos</span>
-          <span class="feature-tag">Pagos programados</span>
+          <span class="feature-tag">Facturación</span>
+          <span class="feature-tag">Pagos pendientes</span>
+          <span class="feature-tag">Ingresos</span>
         </div>
       </div>
  
@@ -734,13 +810,26 @@
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Reportes automáticos</h3>
-        <p>KPIs del mes en un vistazo: consumos totales, costos por tratamiento, contratos próximos a vencer. Sin exportar, sin consolidar, sin fórmulas rotas.</p>
+        <h3>Reportes para tomar decisiones</h3>
+        <p>Analiza la clínica por mes, tratamiento, personal e inventario. Identifica qué funciona y dónde se está perdiendo margen.</p>
         <div class="feature-tags">
-          <span class="feature-tag">KPIs mensuales</span>
-          <span class="feature-tag">Controlling</span>
-          <span class="feature-tag">Exportar datos</span>
+          <span class="feature-tag">Financiero</span>
+          <span class="feature-tag">Tratamientos</span>
+          <span class="feature-tag">Personal</span>
         </div>
+      </div>
+    </div>
+ 
+    <div class="also-row reveal">
+      <span class="also-label">Y además:</span>
+      <div class="also-pills">
+        <span class="also-pill">Agenda</span>
+        <span class="also-pill">Pacientes</span>
+        <span class="also-pill">Compras</span>
+        <span class="also-pill">Personal</span>
+        <span class="also-pill">Servicios</span>
+        <span class="also-pill">Facturación</span>
+        <span class="also-pill">Reportes</span>
       </div>
     </div>
   </div>
@@ -758,48 +847,37 @@
           con orden.
         </h2>
         <p class="reveal reveal-delay-2">
-          Kolibri Dental está diseñado para clínicas dentales de 1 a 5 sillones que ya no quieren depender de planillas y quieren tener el control real de su operación.
+          Kolibri está diseñado para clínicas dentales pequeñas y medianas que necesitan algo más que una agenda: quieren entender y controlar cómo funciona realmente su clínica.
         </p>
         <ul class="pq-checks reveal reveal-delay-3">
           <li>
             <span class="check-icon">
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            Dentistas que también gestionan la clínica
+            Dueños que quieren conocer la rentabilidad real de su clínica
           </li>
           <li>
             <span class="check-icon">
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            Administrativos que quieren datos confiables
+            Clínicas con varios dentistas y costos compartidos
           </li>
           <li>
             <span class="check-icon">
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            Clínicas con más de un dentista o turno
+            Equipos que quieren controlar inventario sin planillas
           </li>
           <li>
             <span class="check-icon">
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7D9B8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            Dueños que quieren saber cuánto ganan realmente
+            Administradores que necesitan información para tomar decisiones
           </li>
         </ul>
       </div>
-      <div class="pq-stats reveal reveal-delay-2">
-        <div class="pq-stat">
-          <div class="pq-stat-num">2–4h</div>
-          <div class="pq-stat-label">ahorradas por semana en administración manual</div>
-        </div>
-        <div class="pq-stat">
-          <div class="pq-stat-num">1 app</div>
-          <div class="pq-stat-label">en vez de 3 planillas + 2 cuadernos</div>
-        </div>
-        <div class="pq-stat" style="grid-column: span 2;">
-          <div class="pq-stat-num">100%</div>
-          <div class="pq-stat-label">construido con y para dentistas reales en Chile — no desde un escritorio</div>
-        </div>
+      <div class="pq-screenshot reveal reveal-delay-2">
+        <img src="assets/Screenshot_Reports.png" alt="Reporte de tratamientos en Kolibri Dental con ingresos, costos, utilidad y margen">
       </div>
     </div>
   </div>
@@ -826,7 +904,7 @@
  
       <div class="faq-item">
         <div class="faq-q">¿Qué tan difícil es migrar desde planillas Excel?<span class="faq-icon">+</span></div>
-        <div class="faq-a">Te ayudamos a importar tu inventario y productos existentes durante el onboarding. La mayoría de las clínicas piloto están operando con datos reales dentro de la primera semana.</div>
+        <div class="faq-a">Te ayudamos a configurar tus productos, tratamientos e inventario inicial durante el onboarding. Si ya tienes la información preparada, una clínica puede quedar configurada aproximadamente en una hora.</div>
       </div>
  
       <div class="faq-item">
@@ -836,7 +914,7 @@
  
       <div class="faq-item">
         <div class="faq-q">¿Hay un período de prueba?<span class="faq-icon">+</span></div>
-        <div class="faq-a">Sí. Ofrecemos una demo personalizada y un período de onboarding guiado antes de activar la facturación. Escríbenos a <a href="mailto:hello@getkolibri.app">hello@getkolibri.app</a> para coordinar.</div>
+        <div class="faq-a">Sí. Puedes probar Kolibri gratis durante 14 días. Si quieres, también te acompañamos personalmente durante la configuración inicial. Escríbenos a <a href="mailto:hello@getkolibri.app">hello@getkolibri.app</a> para coordinar.</div>
       </div>
     </div>
   </div>
@@ -846,16 +924,15 @@
 <section class="cta-section" id="contacto">
   <div class="section-inner">
     <div class="cta-inner">
-      <div class="section-label">Empezar es fácil</div>
-      <h2>¿Lista tu clínica para dejar las planillas atrás?</h2>
-      <p>Estamos onboardeando clínicas piloto en Chile. Cuéntanos sobre tu clínica y conversamos.</p>
+      <div class="section-label">Kolibri ya está disponible</div>
+      <h2>¿Quieres saber cuánto realmente deja cada tratamiento en tu clínica?</h2>
+      <p>Prueba Kolibri gratis durante 14 días o agenda una demo. Si quieres, te acompañamos personalmente durante la configuración inicial.</p>
       <div class="cta-actions">
         <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-white">
-          Solicitar demo
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Agendar una demo →
         </a>
         <a href="https://app.getkolibri.app" class="btn-ghost">
-          Ya tengo cuenta →
+          Probar Kolibri gratis →
         </a>
       </div>
     </div>
