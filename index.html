@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kolibri Dental — Controla costos, inventario y rentabilidad de tu clínica</title>
-<meta name="description" content="Software de gestión para clínicas dentales en Chile. Controla inventario, costos por tratamiento, facturación, personal y rentabilidad — todo en un solo lugar.">
+<title>Software para clínicas dentales en Chile | Kolibri Dental</title>
+<meta name="description" content="Controla los costos reales por tratamiento, el inventario y la rentabilidad de tu clínica dental. Hecho para clínicas en Chile. 14 días gratis.">
  <link rel="icon" type="image/svg+xml" href="assets/icons/kolibri-icon.svg">
 <link rel="icon" type="image/png" href="assets/icons/kolibri-icon.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://getkolibri.app/">
-<meta property="og:title" content="Kolibri Dental — Controla costos, inventario y rentabilidad de tu clínica">
-<meta property="og:description" content="Software de gestión para clínicas dentales en Chile. Controla inventario, costos por tratamiento, facturación, personal y rentabilidad — todo en un solo lugar.">
+<meta property="og:title" content="Software para clínicas dentales en Chile | Kolibri Dental">
+<meta property="og:description" content="Controla los costos reales por tratamiento, el inventario y la rentabilidad de tu clínica dental. Hecho para clínicas en Chile. 14 días gratis.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://getkolibri.app/">
 <meta property="og:image" content="https://getkolibri.app/assets/Dashboard-Screenshot.png">
 <meta property="og:locale" content="es_CL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kolibri Dental — Controla costos, inventario y rentabilidad de tu clínica">
-<meta name="twitter:description" content="Software de gestión para clínicas dentales en Chile. Controla inventario, costos por tratamiento, facturación, personal y rentabilidad — todo en un solo lugar.">
+<meta name="twitter:title" content="Software para clínicas dentales en Chile | Kolibri Dental">
+<meta name="twitter:description" content="Controla los costos reales por tratamiento, el inventario y la rentabilidad de tu clínica dental. Hecho para clínicas en Chile. 14 días gratis.">
 <meta name="twitter:image" content="https://getkolibri.app/assets/Dashboard-Screenshot.png">
 <script type="application/ld+json">
 {
@@ -632,7 +632,10 @@
     .cf-step, .cf-step.reverse { grid-template-columns: 1fr; gap: 1.75rem; }
     .cf-step.reverse .cf-step-media, .cf-step.reverse .cf-step-text { order: initial; }
     .cf-steps { gap: 3rem; }
-    nav { padding: 0 1.25rem; }
+    nav.main-nav { padding: 0 1.25rem; }
+    nav.main-nav .nav-secondary { display: none; }
+    nav.main-nav .nav-links { gap: 1.1rem; }
+    nav.main-nav .btn-nav { display: none; }
     section { padding: 70px 1.25rem; }
   }
 </style>
@@ -642,21 +645,19 @@
 <!-- ── NAVBAR ── -->
 <nav class="main-nav">
   <a href="/" class="nav-logo">
-    <img src="assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
+    <img src="/assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
   </a>
   <ul class="nav-links">
-  <li><a href="#como-funciona">Cómo funciona</a></li>
-  <li><a href="#features">Funciones</a></li>
-  <li><a href="#para-quien">Para quién</a></li>
-  <li><a href="precios.html">Precios</a></li>
-  <li><a href="#faq">FAQ</a></li>
-  <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
-  <li><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
-  <li><a href="https://app.getkolibri.app">Acceder</a></li>
-</ul>
-  <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-nav">
-    Agendar demo →
-  </a>
+    <li class="nav-secondary"><a href="/#como-funciona">Cómo funciona</a></li>
+    <li class="nav-secondary"><a href="/#features">Funciones</a></li>
+    <li class="nav-secondary"><a href="/#para-quien">Para quién</a></li>
+    <li><a href="/precios.html">Precios</a></li>
+    <li class="nav-secondary"><a href="/#faq">FAQ</a></li>
+    <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
+    <li class="nav-secondary"><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
+    <li><a href="https://app.getkolibri.app">Acceder</a></li>
+  </ul>
+  <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&amp;body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-nav">Agendar demo →</a>
 </nav>
  
 <!-- ── HERO ── -->
@@ -960,7 +961,7 @@
  
       <div class="faq-item">
         <div class="faq-q">¿Cómo protegen los datos de mis pacientes?<span class="faq-icon">+</span></div>
-        <div class="faq-a">Los datos se transmiten y almacenan cifrados, con control de acceso por roles. Más detalles en nuestra <a href="/privacidad">Política de Privacidad</a>.</div>
+        <div class="faq-a">Los datos se transmiten y almacenan cifrados, con control de acceso por roles. Más detalles en nuestra <a href="/privacidad.html">Política de Privacidad</a>.</div>
       </div>
  
       <div class="faq-item">
@@ -1005,11 +1006,11 @@
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 Kolibri Tech · hello@getkolibri.app</span>
     <div class="legal-links">
-      <a href="/privacidad">Privacidad</a>
+      <a href="/privacidad.html">Privacidad</a>
       <span>·</span>
-      <a href="/terminos">Términos</a>
+      <a href="/terminos.html">Términos</a>
       <span>·</span>
-      <a href="/impressum">Impressum</a>
+      <a href="/impressum.html">Impressum</a>
     </div>
   </div>
 </footer>
@@ -1028,3 +1029,4 @@ document.querySelectorAll('.faq-q').forEach(q => {
 </script>
 </body>
 </html>
+ 
