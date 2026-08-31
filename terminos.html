@@ -5,9 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Términos y Condiciones — Kolibri Dental</title>
   <meta name="description" content="Términos y condiciones de uso de Kolibri Dental." />
+  <link rel="canonical" href="https://getkolibri.app/terminos.html">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css" />
   <style>
     body { background: #F0EFEB; color: #2A2A28; }
+ 
+    /* ── NAVBAR (einheitlich mit Start- und Preisseite) ── */
+    nav.main-nav {
+      position: sticky; top: 0; z-index: 100;
+      padding: 0 2.5rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: #ffffff; border-bottom: 1px solid rgba(28,35,33,.12);
+      font-family: 'DM Sans', sans-serif;
+    }
+    nav.main-nav .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #1C2321; }
+    nav.main-nav .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+    nav.main-nav .nav-links li { list-style: none; }
+    nav.main-nav .nav-links a { font-size: 14px; color: #1C2321; font-weight: 500; text-decoration: none; transition: color .2s; }
+    nav.main-nav .nav-links a:hover, nav.main-nav .nav-links a.active { color: #4A7C6F; }
+    nav.main-nav .btn-nav {
+      background: #4A7C6F; color: #fff; border: none; border-radius: 8px;
+      padding: .5rem 1.25rem; font-size: 13.5px; font-weight: 500;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+      white-space: nowrap; transition: background .2s, transform .15s;
+    }
+    nav.main-nav .btn-nav:hover { background: #3d6b5f; transform: translateY(-1px); }
+    @media (max-width: 900px) {
+      nav.main-nav { padding: 0 1.25rem; }
+      nav.main-nav .nav-secondary { display: none; }
+      nav.main-nav .nav-links { gap: 1.1rem; }
+      nav.main-nav .btn-nav { display: none; }
+    }
+ 
  
     .legal-nav {
       display: flex; align-items: center; justify-content: space-between;
@@ -90,16 +120,21 @@
 </head>
 <body>
  
-<nav class="legal-nav">
-  <a href="/" class="brand">
-    <img src="assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:30px; width:auto; object-fit:contain;" />
+<nav class="main-nav">
+  <a href="/" class="nav-logo">
+    <img src="/assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
   </a>
-  <div class="nav-links">
-    <a href="/privacidad">Privacidad</a>
-    <a href="/terminos">Términos</a>
-    <a href="/impressum">Impressum</a>
-    <a href="/">Inicio</a>
-  </div>
+  <ul class="nav-links">
+    <li class="nav-secondary"><a href="/#como-funciona">Cómo funciona</a></li>
+    <li class="nav-secondary"><a href="/#features">Funciones</a></li>
+    <li class="nav-secondary"><a href="/#para-quien">Para quién</a></li>
+    <li><a href="/precios.html">Precios</a></li>
+    <li class="nav-secondary"><a href="/#faq">FAQ</a></li>
+    <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
+    <li class="nav-secondary"><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
+    <li><a href="https://app.getkolibri.app">Acceder</a></li>
+  </ul>
+  <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&amp;body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-nav">Agendar demo →</a>
 </nav>
  
 <main class="legal-wrap">
@@ -178,7 +213,7 @@
   <div class="section" id="datos">
     <h2>5. Propiedad de los datos</h2>
     <div class="notice"><strong>Sus datos son suyos.</strong> Kolibri Dental no reivindica propiedad alguna sobre los datos clínicos, de pacientes o de operaciones que el Cliente introduce en el sistema.</div>
-    <p>El Cliente conserva en todo momento la plena titularidad de sus datos. Kolibri Dental los trata únicamente para prestar el servicio y conforme a la <a href="/privacidad">Política de Privacidad</a>.</p>
+    <p>El Cliente conserva en todo momento la plena titularidad de sus datos. Kolibri Dental los trata únicamente para prestar el servicio y conforme a la <a href="/privacidad.html">Política de Privacidad</a>.</p>
     <p>El Cliente puede exportar sus datos en cualquier momento. Ante una solicitud de eliminación de cuenta, Kolibri Dental proporcionará un período de 30 días para la exportación, tras el cual los datos serán eliminados conforme a la política de conservación aplicable.</p>
     <p>Kolibri Dental puede utilizar datos agregados y anonimizados para mejorar el servicio. Nunca se comparten ni venden datos individualizados.</p>
   </div>
@@ -254,9 +289,8 @@
 </main>
  
 <footer class="legal-footer">
-  <p>© 2026 Kolibri Dental &nbsp;·&nbsp; <a href="/privacidad">Política de Privacidad</a> &nbsp;·&nbsp; <a href="/terminos">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="/">getkolibri.app</a></p>
+  <p>© 2026 Kolibri Dental &nbsp;·&nbsp; <a href="/privacidad.html">Política de Privacidad</a> &nbsp;·&nbsp; <a href="/terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp; <a href="/">getkolibri.app</a></p>
 </footer>
  
 </body>
 </html>
- 
