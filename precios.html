@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Precios — Kolibri Dental</title>
-<meta name="description" content="Planes simples para clínicas dentales en Chile. Sin costos ocultos, todas las funciones incluidas desde el primer día.">
+<title>Precios: planes desde USD 39 al mes | Kolibri Dental</title>
+<meta name="description" content="Planes para clínicas dentales en Chile desde USD 39 al mes por dentista. Todas las funciones incluidas, sin módulos adicionales ni costos ocultos.">
 <link rel="icon" type="image/svg+xml" href="assets/icons/kolibri-icon.svg">
 <link rel="icon" type="image/png" href="assets/icons/kolibri-icon.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://getkolibri.app/precios.html">
-<meta property="og:title" content="Precios — Kolibri Dental">
-<meta property="og:description" content="Planes simples para clínicas dentales en Chile. Sin costos ocultos, todas las funciones incluidas desde el primer día.">
+<meta property="og:title" content="Precios: planes desde USD 39 al mes | Kolibri Dental">
+<meta property="og:description" content="Planes para clínicas dentales en Chile desde USD 39 al mes por dentista. Todas las funciones incluidas, sin módulos adicionales ni costos ocultos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://getkolibri.app/precios.html">
 <meta property="og:image" content="https://getkolibri.app/assets/Dashboard-Screenshot.png">
 <meta property="og:locale" content="es_CL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Precios — Kolibri Dental">
-<meta name="twitter:description" content="Planes simples para clínicas dentales en Chile. Sin costos ocultos, todas las funciones incluidas desde el primer día.">
+<meta name="twitter:title" content="Precios: planes desde USD 39 al mes | Kolibri Dental">
+<meta name="twitter:description" content="Planes para clínicas dentales en Chile desde USD 39 al mes por dentista. Todas las funciones incluidas, sin módulos adicionales ni costos ocultos.">
 <meta name="twitter:image" content="https://getkolibri.app/assets/Dashboard-Screenshot.png">
 <script type="application/ld+json">
 {
@@ -78,7 +78,7 @@
     {
       "@type": "Offer",
       "name": "Plan Clínica+",
-      "description": "Para clínicas grandes o con múltiples boxes activos. Incluye todo lo del plan Clínica, hasta 6 dentistas activos, exportación de datos a Excel/CSV y onboarding personalizado.",
+      "description": "Para clínicas grandes o con múltiples boxes activos. Incluye todo lo del plan Clínica, hasta 8 dentistas activos, exportación de datos a Excel/CSV y onboarding personalizado.",
       "price": "149",
       "priceCurrency": "USD",
       "url": "https://getkolibri.app/precios.html",
@@ -413,6 +413,9 @@
   @media (max-width: 900px) {
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
     nav.main-nav { padding: 0 1.25rem; }
+    nav.main-nav .nav-secondary { display: none; }
+    nav.main-nav .nav-links { gap: 1.1rem; }
+    nav.main-nav .btn-nav { display: none; }
     .page-header { padding: 110px 1.25rem 60px; }
     .pricing-section, .faq-section { padding-left: 1.25rem; padding-right: 1.25rem; }
     .sucursales-cta { flex-direction: column; align-items: flex-start; }
@@ -426,22 +429,38 @@
   body.annual .toggle-label.lbl-monthly { color: var(--muted); }
   body.annual .toggle-label.lbl-annual { color: var(--text); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Puedo cambiar de plan más adelante?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes subir o bajar de plan en cualquier momento. El cambio se aplica al siguiente ciclo de facturación."}},
+    {"@type":"Question","name":"¿Qué pasa si tengo más de 8 dentistas?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos a hello@getkolibri.app y armamos un plan a medida para tu clínica."}},
+    {"@type":"Question","name":"¿Hay un período de prueba?","acceptedAnswer":{"@type":"Answer","text":"Sí. Kolibri incluye 14 días gratis para que lo pruebes con tus propios datos. Si prefieres partir acompañado, también te ofrecemos una demo personalizada y un onboarding guiado."}},
+    {"@type":"Question","name":"¿En qué moneda se cobra?","acceptedAnswer":{"@type":"Answer","text":"Los precios están en USD. El cobro se realiza via Stripe con tarjeta de crédito o débito internacional."}},
+    {"@type":"Question","name":"¿Puedo cancelar cuando quiera?","acceptedAnswer":{"@type":"Answer","text":"En el plan mensual puedes cancelar en cualquier momento sin penalidad. En el plan anual, el acceso continúa hasta el final del período pagado."}}
+  ]
+}
+</script>
 </head>
 <body>
  
 <!-- ── NAVBAR ── -->
 <nav class="main-nav">
   <a href="/" class="nav-logo">
-    <img src="assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
+    <img src="/assets/Kolibri_logo_text.png" alt="Kolibri Dental" style="height:40px; width:auto; object-fit:contain;">
   </a>
   <ul class="nav-links">
-    <li><a href="/#features">Funciones</a></li>
-    <li><a href="/#para-quien">Para quién</a></li>
-    <li><a href="precios.html" class="active">Precios</a></li>
+    <li class="nav-secondary"><a href="/#como-funciona">Cómo funciona</a></li>
+    <li class="nav-secondary"><a href="/#features">Funciones</a></li>
+    <li class="nav-secondary"><a href="/#para-quien">Para quién</a></li>
+    <li><a href="/precios.html" class="active">Precios</a></li>
+    <li class="nav-secondary"><a href="/#faq">FAQ</a></li>
     <li><a href="https://blog.getkolibri.app" target="_blank">Blog</a></li>
-    <li><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
+    <li class="nav-secondary"><a href="https://kolibritech.net" target="_blank">Nosotros</a></li>
+    <li><a href="https://app.getkolibri.app">Acceder</a></li>
   </ul>
-  <a href="https://getkolibri.app/login" class="btn-nav">Acceder al app →</a>
+  <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&amp;body=Hola%2C%20me%20interesa%20conocer%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="btn-nav">Agendar demo →</a>
 </nav>
  
 <!-- ── HEADER ── -->
@@ -505,7 +524,7 @@
           Pacientes y agenda
         </li>
       </ul>
-      <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Solo" class="btn-plan btn-plan-outline">Solicitar demo</a>
+      <a href="https://app.getkolibri.app/register" class="btn-plan btn-plan-outline">Empezar gratis →</a>
     </div>
  
     <!-- CLÍNICA (featured) -->
@@ -549,7 +568,7 @@
           Soporte prioritario
         </li>
       </ul>
-      <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Cl%C3%ADnica" class="btn-plan btn-plan-solid">Solicitar demo</a>
+      <a href="https://app.getkolibri.app/register" class="btn-plan btn-plan-solid">Empezar gratis →</a>
     </div>
  
     <!-- CLÍNICA+ -->
@@ -568,7 +587,7 @@
       </div>
       <div class="plan-seats">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#4A7C6F" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round"/></svg>
-        Hasta 6 dentistas
+        Hasta 8 dentistas
       </div>
       <ul class="plan-features">
         <li>
@@ -577,7 +596,7 @@
         </li>
         <li>
           <span class="feat-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          Hasta 6 dentistas activos
+          Hasta 8 dentistas activos
         </li>
         <li>
           <span class="feat-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -592,9 +611,18 @@
           Soporte prioritario
         </li>
       </ul>
-      <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Cl%C3%ADnica%2B" class="btn-plan btn-plan-outline">Solicitar demo</a>
+      <a href="https://app.getkolibri.app/register" class="btn-plan btn-plan-outline">Empezar gratis →</a>
     </div>
  
+  </div>
+ 
+  <!-- ── DEMO CTA ── -->
+  <div class="sucursales-cta">
+    <div class="sucursales-cta-text">
+      <strong>¿Prefieres verlo antes de empezar?</strong>
+      <span>Te mostramos Kolibri en una demo personalizada, con los números de tu clínica.</span>
+    </div>
+    <a href="mailto:hello@getkolibri.app?subject=Demo%20Kolibri%20Dental&amp;body=Hola%2C%20me%20interesa%20una%20demo%20de%20Kolibri%20Dental%20para%20mi%20cl%C3%ADnica." class="sucursales-cta-link">Solicitar demo →</a>
   </div>
  
   <!-- ── SUCURSALES CTA ── -->
@@ -608,7 +636,7 @@
  
   <p class="all-features-note">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#4A7C6F" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Todas las funciones incluidas en todos los planes — sin módulos adicionales.
+    Todas las funciones incluidas en todos los planes, sin módulos adicionales. Los 14 días de prueba no requieren compromiso.
   </p>
 </div>
  
@@ -626,7 +654,7 @@
  
   <div class="faq-item">
     <div class="faq-q">
-      ¿Qué pasa si tengo más de 6 dentistas?
+      ¿Qué pasa si tengo más de 8 dentistas?
       <span class="faq-icon">+</span>
     </div>
     <div class="faq-a">Escríbenos a <a href="mailto:hello@getkolibri.app">hello@getkolibri.app</a> y armamos un plan a medida para tu clínica.</div>
@@ -637,7 +665,7 @@
       ¿Hay un período de prueba?
       <span class="faq-icon">+</span>
     </div>
-    <div class="faq-a">Sí. Ofrecemos una demo personalizada y un período de onboarding guiado antes de activar la facturación. Escríbenos para coordinar.</div>
+    <div class="faq-a">Sí. Kolibri incluye 14 días gratis para que lo pruebes con tus propios datos. Si prefieres partir acompañado, también te ofrecemos una demo personalizada y un onboarding guiado.</div>
   </div>
  
   <div class="faq-item">
@@ -668,7 +696,7 @@
         Hablar con el equipo
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#4A7C6F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="https://getkolibri.app/login" class="btn-ghost">Ya tengo cuenta →</a>
+      <a href="https://app.getkolibri.app" class="btn-ghost">Ya tengo cuenta →</a>
     </div>
   </div>
 </section>
